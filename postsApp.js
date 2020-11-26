@@ -14,7 +14,7 @@ var blogApp = new Vue({
   methods: {
     getSettings() {
       axios
-        .get('http://kxxb-backend.local/api/settings')
+        .get('https://heroku-lumen-kxxb.herokuapp.com/api/settings')
         .then(response => (this.site_settings = response.data.data))
         .catch(error => {console.log(error);
            this.errored = true;
@@ -25,7 +25,7 @@ var blogApp = new Vue({
     },
    getPosts() {
      axios
-       .get('http://kxxb-backend.local/api/blog/all')
+       .get('https://heroku-lumen-kxxb.herokuapp.com/api/blog/all')
        .then(response => (this.posts = response.data.data.items));
    }
  },

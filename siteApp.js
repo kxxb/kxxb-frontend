@@ -7,7 +7,7 @@ var siteApp = new Vue({
   },
   mounted() {
     axios
-      .get('http://kxxb-backend.local/api/settings')
+      .get('https://heroku-lumen-kxxb.herokuapp.com/api/settings')
       .then(response => (this.data = response.data.data))
       .catch(error => console.log(error));
   }
